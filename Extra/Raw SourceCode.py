@@ -1,3 +1,5 @@
+# Part 1 - Importing libraries
+
 import pandas as pd
 import numpy as np 
 
@@ -38,7 +40,6 @@ data.rename(columns = lambda x: x.replace(" ","_"), inplace = True)
 data['Original_Hire_Date'] = pd.to_datetime(data['Original_Hire_Date'])
 
 data.drop_duplicates(inplace=True)
-
 
 # Part 3 - Exploratory Data Analysis
 
@@ -87,9 +88,7 @@ data.groupby('Bureau').aggregate({'Office':'count', 'Base_Pay':'mean'}).nlargest
 
 # Part 4 - Feature Engineering
 
-
 data2 = data
-
 
 data2.head()
 
